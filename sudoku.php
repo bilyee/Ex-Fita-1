@@ -18,7 +18,6 @@
         .tabla {
             position: relative;
             border-collapse: collapse;
-            border: 5px solid black;
         }
         td {
             border: 2px solid black;
@@ -35,6 +34,7 @@
 </body>
 </html>
 
+<h1>Tabla Sudoku</h1>
 <?php
     $fila = 9;
     $columna = 9;
@@ -44,15 +44,15 @@
         for ($j = 0; $j < $columna; $j++) {
             $style = "";
             if ($i % 3 == 0) {
-                $style = "border-top: 5px solid black;";
+                $style .= "border-top: 5px solid black;";
             } elseif ($i == 8) {
-                $style = "border-bottom: 5px solid black;";
+                $style .= "border-bottom: 5px solid black;";
             }
 
             if ($j % 3 == 0) {
-                $style = "border-left: 5px solid black;";
-            } elseif ($j == 9) {
-                $style = "border-right: 5px solid black;";
+                $style .= "border-left: 5px solid black;";
+            } elseif ($j == 8) {
+                $style .= "border-right: 5px solid black;";
             }
             echo "<td style='$style'></td>";
         }
